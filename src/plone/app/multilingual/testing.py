@@ -30,6 +30,8 @@ from zope.event import notify
 from zope.interface import alsoProvides
 from zope.interface import noLongerProvides
 from zope.lifecycleevent import ObjectModifiedEvent
+from Products.CMFCore.indexing import processQueue
+
 import plone.app.dexterity
 import plone.app.multilingual
 try:
@@ -98,6 +100,7 @@ class MultipleLanguagesLayer(z2.Layer):
             # Setup language root folders
             setupTool = SetupMultilingualSite()
             setupTool.setupSite(portal)
+            processQueue()
 
 MULTIPLE_LANGUAGES_LAYER = MultipleLanguagesLayer()
 

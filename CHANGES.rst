@@ -14,6 +14,9 @@ New features:
 
 Bug fixes:
 
+- Adapt RelatedItemsFieldWidget from ``@@add_translations`` view to changes in mockup 2.3.0.
+  [thet]
+
 - Use zope.interface decorator.
   [gforcada]
 
